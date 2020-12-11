@@ -6,11 +6,11 @@ December 2020
 
 <h3>Pseudocode</h3>
 
-
-
-
+[placeholder]
 
 ---------------------------------------
+
+<h3>About</h3>
 
 URL: TBD
 
@@ -20,7 +20,7 @@ From there, the user will be able to view other users on the app who have a comp
 
 ---------------------------------------
 
-<h3>Images<h3>
+<h3>Images</h3>
 
 Original wireframe:
 [placeholder]
