@@ -13,6 +13,7 @@ December 2020
 <h3>About</h3>
 
 URL: TBD
+
 Trello: https://trello.com/b/x0DLuoEy/unit-2-project-astro-dating-app
 
 This is a simple, bare-bones dating app. Users will log in using OAuth and be able to create a user profile where they can enter their birthday, birth time, and birth location information to be assigned their astrological chart.
