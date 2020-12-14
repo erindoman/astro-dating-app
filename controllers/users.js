@@ -2,8 +2,8 @@ const User = require("../models/user");
 
 module.exports = {
   index,
+  show,
   showProfile,
-  update,
   addFriend,
   removeFriend
 };
@@ -14,18 +14,31 @@ function index(req, res) {
   });
 }
 
+// function show(req, res) {
+//   User.findById(req.user._id)
+//   .then((user) => {
+//     res.render("users/profile", {title: "Profile Page", user})
+//   })
+// }
+
 function showProfile(req, res) {
-  User.findById(req.user._id)
-  .populate("friends")
-  .then((user) => {
+  User.findById(req.user._id, function(err, user) {
     res.render("users/profile", {title: "Profile Page", user})
   })
 }
 
-function update(req, res) {
-  User.findByIdAndUpdate(req.user._id, req.body, {new: true})
-  .then(() => {
-    res.redirect("/users/profile")
+function show(req, res) {
+  User.findById(req.params.id)
+  .then((userInfo) => {
+    Game.find({ favoritedBy: userInfo._id })
+    .then((games) => {
+      res.render("users/show", {
+        title: "User Details",
+        userInfo,
+        user: req.user,
+        games
+      })
+    })
   })
 }
 
