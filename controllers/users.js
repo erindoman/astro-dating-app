@@ -14,15 +14,10 @@ function index(req, res) {
   });
 }
 
-// function show(req, res) {
-//   User.findById(req.user._id)
-//   .then((user) => {
-//     res.render("users/profile", {title: "Profile Page", user})
-//   })
-// }
-
 function showProfile(req, res) {
-  User.findById(req.user._id, function(err, user) {
+  User.findById(req.user._id)
+  .populate("friends")
+  .then((user) => {
     res.render("users/profile", {title: "Profile Page", user})
   })
 }

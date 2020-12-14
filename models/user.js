@@ -13,9 +13,17 @@ const userSchema = new Schema(
   }
 );
 
+const signSchema = new Schema({
+  sign: {type: String, enum: ['Aquarius, Pisces, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn']},
+  googleId: String,
+},{
+  timestamps: true,
+}
+);
+
 const sunSign = new Schema({
   objectId: String,
-  sign: {type: String, enum: ['Aquarius, Pisces, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn']},
+  sign: [signSchema],
   startDate: Date,
   endDate: Date,
   users: [""]
@@ -25,7 +33,7 @@ const sunSign = new Schema({
 
 const moonSign = new Schema({
   objectId: String,
-  sign: {type: String, enum: ['Aquarius, Pisces, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn']},
+  sign: [signSchema],
   startDate: Date,
   endDate: Date,
   users: [""]
@@ -35,7 +43,7 @@ const moonSign = new Schema({
 
 const ascSign = new Schema({
   objectId: String,
-  sign: {type: String, enum: ['Aquarius, Pisces, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn']},
+  sign: [signSchema],
   startDate: Date,
   endDate: Date,
   users: [""]
