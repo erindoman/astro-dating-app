@@ -6,8 +6,6 @@
   </div>
   <div class="card-body">
     <h5 class="card-title"><%= userInfo.name %></h5>
-    
-    <p class="card-text">Joined: <%= userInfo.createdAt.toLocaleString().split(',')[0] %></p>
     <p class="card-text">Email: <a href="mailto:<%= userInfo.email %>"><%= userInfo.email %></a></p>
     
     <% if (!userInfo._id.equals(user._id) && !user.friends.includes(userInfo._id)) { %>
