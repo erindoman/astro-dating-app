@@ -13,4 +13,34 @@ const userSchema = new Schema(
   }
 );
 
+const sunSign = new Schema({
+  objectId: String,
+  title: String,
+  startDate: Date,
+  endDate: Date,
+  users: [""]
+}, {
+  timestamps: true
+})
+
+const moonSign = new Schema({
+  objectId: String,
+  title: String,
+  startDate: Date,
+  endDate: Date,
+  users: [""]
+}, {
+  timestamps: true
+})
+
+const ascSign = new Schema({
+  objectId: String,
+  title: String,
+  startDate: Date,
+  endDate: Date,
+  users: [""]
+}, {
+  timestamps: true
+})
+
 module.exports = mongoose.model("User", userSchema);
