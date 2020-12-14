@@ -16,12 +16,18 @@ html {
 }
 
 
+section.wrapper {
+  text-align: center;
+}
+
 body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgb(5, 34, 56);
   margin: 0;
   text-align: right;
-  justify-content: center;
+  justify-content: center;  
+  align-items: center;
+  min-height: 100vh;
 
 }
 
@@ -38,14 +44,13 @@ nav {
 
 section {
   background-color: rgba(255, 255, 255, 0.301);
-  margin: 300px;
+  margin: 150px 400px;
   padding: 100px;
   color: white;
   text-align: center;
-  max-width: 300px;
   justify-content: center;
   border-radius: 15px;
-
+  text-shadow: 1px 1px #000000;
 }
 
 li {
