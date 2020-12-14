@@ -1,22 +1,47 @@
-const User = require('../models/user')
+const User = require("../models/user");
 
-module.exports =  {
-    index,
-    create
+module.exports = {
+  index,
+  showProfile,
+  update,
+  addFriend,
+  removeFriend
+};
+
+function index(req, res) {
+  User.find({}).then((users) => {
+    res.render("users/index", { title: "User Index", user: req.user, users });
+  });
 }
 
-function index(req, res, next) {
-    let modelQuery = req.query.name
-    ? { name: new RegExp(req.query.name, "i") }
-    : {};
-  Student.find(modelQuery)
-    .sort("name")
-    .exec(function (err, students) {
-      if (err) return next(err);
-      res.render('students/index', {
-        students,
-        name: req.query.name,
-        user: req.user
-      });
-    });
-  }
+function showProfile(req, res) {
+  User.findById(req.user._id)
+  .populate("friends")
+  .then((user) => {
+    res.render("users/profile", {title: "Profile Page", user})
+  })
+}
+
+function update(req, res) {
+  User.findByIdAndUpdate(req.user._id, req.body, {new: true})
+  .then(() => {
+    res.redirect("/users/profile")
+  })
+}
+
+function addFriend(req, res) {
+  req.user.friends.push(req.params.id)
+  req.user.save()
+  .then(() => {
+    res.redirect(`/users/${req.params.id}`)
+  })
+}
+
+function removeFriend(req, res) {
+  let idx = req.user.friends.indexOf(req.params.id)
+  req.user.friends.splice(idx, 1)
+  req.user.save()
+  .then(() => {
+    res.redirect(`/users/${req.params.id}`)
+  })
+}
