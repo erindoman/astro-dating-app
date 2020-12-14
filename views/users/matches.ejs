@@ -1,0 +1,55 @@
+<%- include('../partials/header') %>
+
+<h3><%= user.name %></h3>
+
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+
+<div class="card" style="width: 36rem;">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="profileinfo-tab" data-toggle="tab" href="#profileinfo" role="tab" aria-controls="profileinfo" aria-selected="true">About Me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="updateinfo-tab" data-toggle="tab" href="#updateinfo" role="tab" aria-controls="updateinfo" aria-selected="false">Edit</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="friends-tab" data-toggle="tab" href="#friends" role="tab" aria-controls="friends" aria-selected="false">Friends</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="profileinfo" role="tabpanel" aria-labelledby="profileinfo-tab">
+        <div class="card-body">
+          <h5 class="card-title">Name: <%= user.name %></h5>
+          <p class="card-text">Email: <%= user.email %></p>
+          <p class="card-text">Bio: <%= user.bio %></p>
+        </div>
+      </div>
+
+
+      <div class="tab-pane fade" id="updateinfo" role="tabpanel" aria-labelledby="updateinfo-tab">
+        <div class="card-body">
+            <form action="/users/profile?_method=PUT" method="POST">
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <label for="avatarUrl">Avatar Image URL:</label>
+                    <input type="text" id="avatarUrl" class="form-control" name="avatar" value="<%= user.avatar %>">
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <label for="bio">Bio:</label>
+                    <textarea rows="3" id="bio" class="form-control" name="bio"><%= user.bio %></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-warning">Update</button>
+              </form>
+        </div>
+      </div>
+</div>
+
+
+<%- include('../partials/footer') %>

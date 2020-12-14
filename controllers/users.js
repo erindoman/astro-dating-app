@@ -5,7 +5,8 @@ module.exports = {
   show,
   showProfile,
   addFriend,
-  removeFriend
+  removeFriend,
+  sign,
 };
 
 function index(req, res) {
@@ -53,3 +54,11 @@ function removeFriend(req, res) {
     res.redirect(`/users/${req.params.id}`)
   })
 }
+
+function sign(req, res) {
+  res.render("signs", {
+    title: "Signs",
+    user: req.user,
+    results: null,
+  });
+} 
