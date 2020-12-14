@@ -15,7 +15,7 @@ const userSchema = new Schema(
 
 const sunSign = new Schema({
   objectId: String,
-  title: String,
+  sign: {type: String, enum: ['Aquarius, Pisces, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn']},
   startDate: Date,
   endDate: Date,
   users: [""]
@@ -25,7 +25,7 @@ const sunSign = new Schema({
 
 const moonSign = new Schema({
   objectId: String,
-  title: String,
+  sign: {type: String, enum: ['Aquarius, Pisces, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn']},
   startDate: Date,
   endDate: Date,
   users: [""]
@@ -35,7 +35,7 @@ const moonSign = new Schema({
 
 const ascSign = new Schema({
   objectId: String,
-  title: String,
+  sign: {type: String, enum: ['Aquarius, Pisces, Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn']},
   startDate: Date,
   endDate: Date,
   users: [""]
