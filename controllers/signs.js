@@ -9,7 +9,8 @@ let config = {
 
 module.exports = {
   index,
-  search
+  search,
+  showSign
 }
 
 function index(req, res) {
@@ -28,16 +29,16 @@ function search(req, res){
     .catch(function(error) {
         console.error(error)
     })
-    });
+  });
 }
 
-// function showSign(req, res) {
-//   axios
-//     .get(`https://astrology-horoscope.p.rapidapi.com/zodiac_finder/details_requirements/`)
-//     .then((response) => {
-//       res.render("signs", {
-//         title: "About the Signs",
-//         message: response.data
-//         }); 
-//       });
-//   }
+function showSign(req, res) {
+  axios
+    .get(`https://astrology-horoscope.p.rapidapi.com/zodiac_finder/details_requirements/`, config)
+    .then((response) => {
+      res.render("signs", {
+        title: "About the Signs",
+        message: response.data
+        }); 
+      });
+  }
