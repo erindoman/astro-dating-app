@@ -8,7 +8,7 @@
           <h5 class="card-title">
             <%= user.name %>
           </h5>
-          <a href="/edit">Edit Profile</a>
+          <a href="/user/<%= user._id %>?_method=PUT">Edit Profile</a>
           <a href="/matches">View Matches</a>
           <p class="card-text">Email: <%= user.email %>
           </p>

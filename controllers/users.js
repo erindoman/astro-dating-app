@@ -4,9 +4,7 @@ module.exports = {
   index,
   show,
   showProfile,
-  addFriend,
-  removeFriend,
-  sign,
+  update
 };
 
 function index(req, res) {
@@ -24,41 +22,11 @@ function showProfile(req, res) {
 }
 
 function show(req, res) {
-  User.findById(req.params.id)
-  .then((userInfo) => {
-    Game.find({ favoritedBy: userInfo._id })
-    .then((games) => {
-      res.render("users/show", {
-        title: "User Details",
-        userInfo,
-        user: req.user,
-        games
-      })
-    })
+  User.findById(req.params.id, function(err, user) {
+    res.render('users/profile', {users})
   })
 }
 
-function addFriend(req, res) {
-  req.user.friends.push(req.params.id)
-  req.user.save()
-  .then(() => {
-    res.redirect(`/users/${req.params.id}`)
-  })
-}
+function update(req, res){
 
-function removeFriend(req, res) {
-  let idx = req.user.friends.indexOf(req.params.id)
-  req.user.friends.splice(idx, 1)
-  req.user.save()
-  .then(() => {
-    res.redirect(`/users/${req.params.id}`)
-  })
 }
-
-function sign(req, res) {
-  res.render("signs", {
-    title: "Signs",
-    user: req.user,
-    results: null,
-  });
-} 
