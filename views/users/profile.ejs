@@ -5,9 +5,9 @@
     <div class="tab-content">
       <div class="tab-pane fade show active">
         <div class="card-body">
-          <h5 class="card-title">
-            <%= user.name %>
-          </h5>
+          <h3 class="card-title">
+            Welcome back, <%= user.name %>! 
+          </h3>
           <a href="/user/<%= user._id %>?_method=PUT">Edit Profile</a>
           <a href="/matches">View Matches</a>
           <p class="card-text">Email: <%= user.email %>
