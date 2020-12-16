@@ -10,14 +10,6 @@ html {
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-family: 'Quicksand', sans-serif;
 }
- 
-:root {
-  font-size: 80.5%
-}
-
-.nav-item {
-  text-align: right;
-}
 
 p {
   color: rgba(255, 255, 255, 0.486);
@@ -32,7 +24,6 @@ body {
   text-align: right;
   justify-content: center;  
   align-items: center;
-  min-height: 100vh;
 }
 
 .card {
