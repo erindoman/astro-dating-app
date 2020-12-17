@@ -6,6 +6,7 @@
                 <div class="card-body">
                     <h3 class="card-title">
                         <% users.forEach(function(user) { %>
+                            <h2> <%= user.name %></h2>
                             <p class="card-text">Bio: <%= user.bio %>
                             </p>
                             <p class="card-text">Sun Sign: <%= user.sunSign %>

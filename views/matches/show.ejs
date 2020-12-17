@@ -15,13 +15,13 @@
         <%= userInfo.name %>
       </h5>
 
-          <!-- This is where we'll render buttons to add/remove a user as a match -->
-          <% if (!userInfo._id.equals(user._id) && !user.matches.includes(userInfo._id)) { %>
-            <a href="/users/<%= userInfo._id %>/match" class="btn btn-primary">Add Match</a>
+      <!-- This is where we'll render buttons to add/remove a user as a match -->
+      <% if (!userInfo._id.equals(user._id) && !user.matches.includes(userInfo._id)) { %>
+        <a href="/users/<%= userInfo._id %>/match" class="btn btn-primary">Add Match</a>
+        <% } %>
+          <% if (!userInfo._id.equals(user._id) && user.matches.includes(userInfo._id)) { %>
+            <a href="/users/<%= userInfo._id %>/unmatch" class="btn btn-primary">Remove Match</a>
             <% } %>
-              <% if (!userInfo._id.equals(user._id) && user.matches.includes(userInfo._id)) { %>
-                <a href="/users/<%= userInfo._id %>/unmatch" class="btn btn-primary">Remove Match</a>
-                <% } %>
     </div>
   </div>
 
