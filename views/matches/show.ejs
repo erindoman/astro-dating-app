@@ -1,20 +1,28 @@
 <%- include('../partials/header') %>
 
-<div class="card" style="width: 18rem;">
-  <img id="avatarPhoto" style="height: 18rem;" class="card-img-top" src="<%= userInfo.avatar ? userInfo.avatar : 'http://theoldreader.com/kittens/300/300/'  %>" alt="Card image cap">
-  <div class="card-header">
+  <h3>
+    <%= title %>
+  </h3>
+
+  <div class="card" style="width: 18rem;">
+    <!-- If our user doesn't have an avatar image, let's use a silly cat picture! -->
+    <img id="avatarPhoto" style="height: 18rem;" class="card-img-top"
+      src="<%= userInfo.avatar ? userInfo.avatar : 'http://theoldreader.com/kittens/300/300/'  %>" alt="Card image cap">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= userInfo.name %>
+      </h5>
+
+          <!-- This is where we'll render buttons to add/remove a user as a match -->
+          <% if (!userInfo._id.equals(user._id) && !user.matches.includes(userInfo._id)) { %>
+            <a href="/users/<%= userInfo._id %>/match" class="btn btn-primary">Add Match</a>
+            <% } %>
+              <% if (!userInfo._id.equals(user._id) && user.matches.includes(userInfo._id)) { %>
+                <a href="/users/<%= userInfo._id %>/unmatch" class="btn btn-primary">Remove Match</a>
+                <% } %>
+    </div>
   </div>
-  <div class="card-body">
-    <h5 class="card-title"><%= userInfo.name %></h5>
-    <p class="card-text">Email: <a href="mailto:<%= userInfo.email %>"><%= userInfo.email %></a></p>
-    
-    <% if (!userInfo._id.equals(user._id) && !user.friends.includes(userInfo._id)) { %>
-      <a href="/users/<%= userInfo._id %>/friend" class="btn btn-primary">Add Friend</a>
-    <% } %>
-    <% if (!userInfo._id.equals(user._id) && user.friends.includes(userInfo._id)) { %>
-      <a href="/users/<%= userInfo._id %>/unfriend" class="btn btn-primary">Remove Friend</a>
-    <% } %>
-  </div>
-</div>
- 
-<%- include('../partials/footer') %>
+
+  <%- include('../partials/footer') %>

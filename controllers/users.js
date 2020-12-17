@@ -4,7 +4,7 @@ module.exports = {
   index,
   show,
   showProfile,
-  update
+  edit
 };
 
 function index(req, res) {
@@ -22,11 +22,11 @@ function showProfile(req, res) {
 }
 
 function show(req, res) {
-  User.findById(req.params.id, function(err, user) {
-    res.render('users/profile', {users})
+  User.findById(req.params.id, function(err, users) {
+    res.render('users/show', {users})
   })
 }
 
-function update(req, res){
-
+function edit(req, res){
+ res.render("users/edit", {title: "Edit Page", user: req.user} )
 }

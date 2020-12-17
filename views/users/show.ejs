@@ -1,21 +1,59 @@
 <%- include('../partials/header') %>
 
-<h3><%= user.name %></h3>
+<form action="/users/<%= user._id %>?_method=PUT" method="POST">
 
-  <div class="card">
-    <h5 class="card-title"><%= userInfo.name %></h5>
+  <label>Bio:</label>
+        <input type="text" name="name" value="<%= taco.name %>">
+           
+  <label>Sun Sign: </label>
+  <select name="sunSign">
+    <option value="aquarius">Aquarius</option>
+    <option value="Pisces">Pisces</option>
+    <option value="Aries">Aries</option>
+    <option value="Taurus">Taurus</option>
+    <option value="aquarius">Gemini</option>
+    <option value="Pisces">Cancer</option>
+    <option value="Aries">Leo</option>
+    <option value="Taurus">Virgo</option>
+    <option value="aquarius">Libra</option>
+    <option value="Pisces">Scorpio</option>
+    <option value="Aries">Sagittarius</option>
+    <option value="Taurus">Capricorn</option>
+  </select>     
 
-    <p class="card-text">Email: <a href="mailto:<%= userInfo.email %>"><%= userInfo.email %></a></p>
+        <label>Moon Sign: </label>
+  <select name="moonSign">
+    <option value="aquarius">Aquarius</option>
+    <option value="Pisces">Pisces</option>
+    <option value="Aries">Aries</option>
+    <option value="Taurus">Taurus</option>
+    <option value="aquarius">Gemini</option>
+    <option value="Pisces">Cancer</option>
+    <option value="Aries">Leo</option>
+    <option value="Taurus">Virgo</option>
+    <option value="aquarius">Libra</option>
+    <option value="Pisces">Scorpio</option>
+    <option value="Aries">Sagittarius</option>
+    <option value="Taurus">Capricorn</option>
+  </select>   
 
-    <p class="card-text">Sun Sign: <%= userInfo.sunsign %></p>
-    
-    <% if (!userInfo._id.equals(user._id) && !user.friends.includes(userInfo._id)) { %>
-      <a href="/users/<%= userInfo._id %>/friend" class="btn btn-primary">Add Match</a>
-    <% } %>
-    <% if (!userInfo._id.equals(user._id) && user.friends.includes(userInfo._id)) { %>
-      <a href="/users/<%= userInfo._id %>/unfriend" class="btn btn-primary">Remove Match</a>
-    <% } %>
-  </div>
-</div>
+  <label>Asc Sign: </label>
+  <select name="ascSign" id="ascSign">
+    <option value="aquarius">Aquarius</option>
+    <option value="Pisces">Pisces</option>
+    <option value="Aries">Aries</option>
+    <option value="Taurus">Taurus</option>
+    <option value="aquarius">Gemini</option>
+    <option value="Pisces">Cancer</option>
+    <option value="Aries">Leo</option>
+    <option value="Taurus">Virgo</option>
+    <option value="aquarius">Libra</option>
+    <option value="Pisces">Scorpio</option>
+    <option value="Aries">Sagittarius</option>
+    <option value="Taurus">Capricorn</option>
+  </select>   
 
-<%- include('../partials/footer') %>
+  <button type="submit">Submit</button>
+</form>
+
+  <%- include('../partials/footer') %>

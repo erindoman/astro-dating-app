@@ -1,14 +1,18 @@
 <%- include('../partials/header') %>
 
-<h3>Users</h3>
-<% users.forEach(u => { %>
-  <a href="/users/<%= u._id %>">
-    <div class="card">
-      <div class="card-body">
-        <img height="50" id="avatarPhoto" src="<%= u.avatar ? u.avatar : 'http://theoldreader.com/kittens/300/300/' %>" alt=""> 
-      </div>
-    </div><br>
-<% }) %>
-</section>
+<% users.forEach(function(u) { %> 
+  <form action="/users/<%= u._id %>?_method=DELETE" method="POST">
+    <p class="card-text">Email: <%= u.email %>
+    </p>
+    <p class="card-text">Bio: <%= u.bio %>
+    </p>
+    <p class="card-text">Sun sign: [placeholder]</p>
+    <p class="card-text">Moon sign: [placeholder]</p>
+    <p class="card-text">Asc sign: [placeholder]</p>
+      <button type="submit">X</button>
+      <br>
+      <br>
+  </form>
+  <% }) %>
 
 <%- include('../partials/footer') %>

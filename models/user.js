@@ -24,10 +24,10 @@ const userSchema = new Schema(
     email: String,
     avatar: String,
     googleId: String,
-    matches: [{type: Schema.Types.ObjectId, ref: 'Match'}],
-    sunSign: [{type: Schema.Types.ObjectId, ref: 'Sign'}],
-    moonSign: [{type: Schema.Types.ObjectId, ref: 'Sign'}],
-    ascSign: [{type: Schema.Types.ObjectId, ref: 'Sign'}]
+    bio: String,
+    sunSign: {type: Schema.Types.ObjectId, ref: 'Sign'},
+    moonSign: String,
+    ascSign: String
   },{
     timestamps: true,
   }

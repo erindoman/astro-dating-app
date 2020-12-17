@@ -1,11 +1,11 @@
 const User = require("../models/user");
-const axios = require('axios')
+// const axios = require('axios')
 
-let config = {
-    headers: {
-        'x-rapidapi-key': process.env.API_KEY
-    }
-}
+// let config = {
+//     headers: {
+//         'x-rapidapi-key': process.env.API_KEY
+//     }
+// }
 
 module.exports = {
   index,

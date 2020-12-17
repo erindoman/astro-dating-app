@@ -1,25 +1,25 @@
 <%- include('../partials/header') %>
 
+<div class="card">
 
-  <div class="card">
-    <div class="tab-content">
-      <div class="tab-pane fade show active">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="profileinfo" role="tabpanel" aria-labelledby="profileinfo-tab">
         <div class="card-body">
-          <h3 class="card-title">
-            Welcome back, <%= user.name %>! 
-          </h3>
-          <a href="/user/<%= user._id %>?_method=PUT">Edit Profile</a>
-          <a href="/matches">View Matches</a>
-          <p class="card-text">Email: <%= user.email %>
-          </p>
-          <p class="card-text">Bio: <%= user.bio %>
-          </p>
-          <p class="card-text">Sun sign: [placeholder]</p>
-          <p class="card-text">Moon sign: [placeholder]</p>
-          <p class="card-text">Asc sign: [placeholder]</p>
+          <h5 class="card-title">Name: <%= user.name %></h5>
+          <a href="/users/<%= user._id %>/edit">Edit Profile</a>
+
+          <p class="card-text">Email: <%= user.email %></p>
+          <p class="card-text">Bio: <%= user.bio %></p>
+
+          <p class="card-text">Sun Sign: <%= user.sunSign %></p>
+          <p class="card-text">Moon Sign: <%= user.moonSign %></p>
+          <p class="card-text">Asc Sign: <%= user.ascSign %></p>
+
+
         </div>
       </div>
     </div>
   </div>
 
-  <%- include('../partials/footer') %>
+
+<%- include('../partials/footer') %>
