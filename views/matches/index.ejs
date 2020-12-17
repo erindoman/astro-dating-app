@@ -5,18 +5,17 @@
             <div class="tab-pane fade show active">
                 <div class="card-body">
                     <h3 class="card-title">
-                        <% users.forEach(function(u) { %>
-                            <form action="/users/<%= u._id %>?_method=DELETE" method="POST">
-                                <p class="card-text">Email: <%= user.email %>
-                                </p>
-                                <p class="card-text">Bio: <%= user.bio %>
-                                </p>
-                                <p class="card-text">Sun sign: [placeholder]</p>
-                                <p class="card-text">Moon sign: [placeholder]</p>
-                                <p class="card-text">Asc sign: [placeholder]</p>
-                                <button type="submit">X</button>
-                                <br>
-                                <br>
+                        <% users.forEach(function(user) { %>
+                            <p class="card-text">Bio: <%= user.bio %>
+                            </p>
+                            <p class="card-text">Sun Sign: <%= user.sunSign %>
+                            </p>
+                            <p class="card-text">Moon Sign: <%= user.moonSign %>
+                            </p>
+                            <p class="card-text">Asc Sign: <%= user.ascSign %>
+                            </p>
+                            <br>
+                            <br>
                             </form>
                             <% }) %>
                 </div>

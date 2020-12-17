@@ -37,3 +37,4 @@ function update(req, res) {
     res.redirect('/users/profile')
   })
 }
+

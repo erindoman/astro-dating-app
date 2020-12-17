@@ -22,6 +22,7 @@ const authRouter = require("./routes/auth");
 const usersRouter = require("./routes/users");
 const signsRouter = require("./routes/signs")
 const matchesRouter = require("./routes/matches")
+const messagesRouter = require('./routes/messages')
 
 const app = express();
 
@@ -54,6 +55,7 @@ app.use("/auth", authRouter);
 app.use("/users", usersRouter);
 app.use("/signs", signsRouter)
 app.use("/matches", matchesRouter)
+app.use('/messages', messagesRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
