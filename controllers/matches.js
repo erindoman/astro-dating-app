@@ -12,7 +12,7 @@ sunsignLookup = {
   sagittarius: ["Leo", "Aries"],
   capricorn: ["Virgo", "Taurus"],
   aquarius: ["Gemini", "Libra"],
-  Pisces: ["Cancer", "Scorpio"],
+  pisces: ["Cancer", "Scorpio"],
 }
 
 module.exports = {
@@ -21,7 +21,6 @@ module.exports = {
 
 function index(req, res) {
   User.findById(req.user._id)
-  .populate("sunSign")
   .then((user) => {
     User.find({sunSign: { $in: sunsignLookup[user.sunSign]}})
     .then((users) => {

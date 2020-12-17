@@ -17,51 +17,40 @@ const Schema = mongoose.Schema;
 //       message: {type: null}
 //     }
 //   }) 
-  
+
+
+const sunSign = new Schema({
+  name: String,
+}, {
+  timestamps: true
+})
+
+const moonSign = new Schema({
+  name: String,
+}, {
+  timestamps: true
+})
+
+const ascSign = new Schema({
+  name: String,
+}, {
+  timestamps: true
+})
+
 const userSchema = new Schema(
   {
     name: String,
     email: String,
     avatar: String,
     googleId: String,
-    bio: String,
-    sunSign: {type: Schema.Types.ObjectId, ref: 'Sign'},
+    status: String,
+    sunSign: String,
     moonSign: String,
     ascSign: String
-  },{
-    timestamps: true,
-  }
+  }, {
+  timestamps: true,
+}
 );
 
-
-  // const sunSign = new Schema({
-    //   objectId: String,
-    //   sign: [signSchema],
-    //   startDate: Date,
-    //   endDate: Date,
-    //   users: [""]
-// }, {
-//   timestamps: true
-// })
-
-// const moonSign = new Schema({
-//   objectId: String,
-//   sign: [signSchema],
-//   startDate: Date,
-//   endDate: Date,
-//   users: [""]
-// }, {
-//   timestamps: true
-// })
-
-// const ascSign = new Schema({
-//   objectId: String,
-//   sign: [signSchema],
-//   startDate: Date,
-//   endDate: Date,
-//   users: [""]
-// }, {
-//   timestamps: true
-// })
 
 module.exports = mongoose.model("User", userSchema);

@@ -6,7 +6,7 @@ module.exports = {
   showProfile,
   edit,
   update,
-  delete: deleteBio
+  delete: deleteStatus
 };
 
 function index(req, res) {
@@ -19,6 +19,7 @@ function showProfile(req, res) {
   User.findById(req.user._id)
   .populate("friends")
   .then((user) => {
+    console.log(user)
     res.render("users/profile", {title: "Profile Page", user})
   })
 }
@@ -34,12 +35,13 @@ function edit(req, res){
 }
 
 function update(req, res) {
+  
   User.findByIdAndUpdate(req.params.id, req.body, {new:true}, function(err, user){
     res.redirect('/users/profile')
   })
 }
 
-function deleteBio(req, res) {
+function deleteStatus(req, res) {
   User.findByIdAndDelete(req.params.id, (err) => {
     res.redirect('/users/profile', {users})
   })
