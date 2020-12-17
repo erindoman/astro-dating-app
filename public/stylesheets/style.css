@@ -12,9 +12,13 @@ html {
 }
 
 p {
-  color: rgba(255, 255, 255, 0.486);
+  color: white;
   text-align: center;
   margin: 220px;
+}
+
+hr {
+  background-color: white;
 }
 
 body {
@@ -67,9 +71,15 @@ p {
   align-items: right;
 }
 
+
 a {
   color: white;
-  padding: 20px
+  padding: 20px;
+  
+}
+
+.learn {
+  font-size: 12px;
 }
 
 nav {
@@ -98,10 +108,6 @@ input {
 
 .btn btn-success {
   background-color: blue;
-}
-
-.btn btn-primary {
-  background-color: white;
 }
 
 #avatarPhoto {
