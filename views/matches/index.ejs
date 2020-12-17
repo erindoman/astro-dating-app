@@ -1,27 +1,27 @@
 <%- include('../partials/header') %>
 
     <div class="card">
-        <div class="tab-content">
-            <div class="tab-pane fade show active">
-                <div class="card-body">
-                    <h3 class="card-title">
-                        <% users.forEach(function(user) { %>
-                            <h2> <%= user.name %></h2>
-                            <p class="card-text">Bio: <%= user.bio %>
-                            </p>
-                            <p class="card-text">Sun Sign: <%= user.sunSign %>
-                            </p>
-                            <p class="card-text">Moon Sign: <%= user.moonSign %>
-                            </p>
-                            <p class="card-text">Asc Sign: <%= user.ascSign %>
-                            </p>
-                            <br>
-                            <br>
-                            </form>
-                            <% }) %>
-                </div>
-            </div>
+        <div class="card-body">
+            <h3 class="card-title">
+                <% users.forEach(function(user) { %>
+                    <h2>
+                        <%= user.name %>
+                    </h2>
+                    <p class="card-text">Bio: <%= user.bio %>
+                    </p>
+                    <p class="card-text">Sun Sign: <%= user.sunSign %>
+                    </p>
+                    <p class="card-text">Moon Sign: <%= user.moonSign %>
+                    </p>
+                    <p class="card-text">Asc Sign: <%= user.ascSign %>
+                    </p>
+                    <br>
+                    <br>
+                    </form>
+                    <% }) %>
         </div>
+    </div>
+    </div>
     </div>
 
     <%- include('../partials/footer') %>
