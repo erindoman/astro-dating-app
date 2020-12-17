@@ -5,6 +5,13 @@
 <h5>Posted on <%= message.createdAt.toLocaleString() %> - <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt=""></h5>
 
 <% message.replies.forEach(reply => { %>
+    
+    <div class="card">
+        <div class="card-header">
+          <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
+        </div>
+        <div class="card-body">
+      
     <h6><%= reply.message %> - <%= reply.postedBy %> <img id="avatarPhoto" width="25" src="<%= reply.avatar %>" alt=""></h6>
 <% }) %>
 
@@ -14,5 +21,8 @@
   </div>
   <button type="submit" class="btn btn-primary">Reply</button>
 </form>
+
+</div>
+</div>
 
 <%- include('../partials/footer') %>

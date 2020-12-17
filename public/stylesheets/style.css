@@ -39,6 +39,22 @@ body {
 
 }
 
+.fire {
+  color: rgb(92, 7, 7)
+}
+
+.earth {
+  color: rgb(19, 75, 19)
+}
+
+.water {
+  color: rgb(13, 13, 167)
+}
+
+.air {
+  color: rgb(129, 112, 35)
+}
+
 p.card-text {
   margin: 10px;
 }
@@ -72,6 +88,20 @@ section {
 
 li {
   list-style: none
+}
+
+input {
+  max-width: 500px;
+  justify-content: center;
+  margin: 0 200px
+}
+
+.btn btn-success {
+  background-color: blue;
+}
+
+.btn btn-primary {
+  background-color: white;
 }
 
 #avatarPhoto {
