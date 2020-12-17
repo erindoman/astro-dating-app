@@ -4,7 +4,8 @@ module.exports = {
   index,
   show,
   showProfile,
-  edit
+  edit,
+  update
 };
 
 function index(req, res) {
@@ -29,4 +30,10 @@ function show(req, res) {
 
 function edit(req, res){
  res.render("users/edit", {title: "Edit Page", user: req.user} )
+}
+
+function update(req, res) {
+  User.findByIdAndUpdate(req.params.id, req.body, {new:true}, function(err, user){
+    res.redirect('/users/profile')
+  })
 }

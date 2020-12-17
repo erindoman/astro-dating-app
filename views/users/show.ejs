@@ -1,9 +1,9 @@
 <%- include('../partials/header') %>
 
-<form action="/users/<%= user._id %>?_method=PUT" method="POST">
+<form action="/users/profile/?_method=PUT" method="POST">
 
   <label>Bio:</label>
-        <input type="text" name="name" value="<%= taco.name %>">
+        <input type="text" name="name" value="<%= user.name %>">
            
   <label>Sun Sign: </label>
   <select name="sunSign">
