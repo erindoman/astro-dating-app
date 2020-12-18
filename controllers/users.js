@@ -17,7 +17,7 @@ function index(req, res) {
 
 function showProfile(req, res) {
   User.findById(req.user._id)
-  .populate("friends")
+  .populate("matches")
   .then((user) => {
     console.log(user)
     res.render("users/profile", {title: "Profile Page", user})
@@ -35,7 +35,6 @@ function edit(req, res){
 }
 
 function update(req, res) {
-  
   User.findByIdAndUpdate(req.params.id, req.body, {new:true}, function(err, user){
     res.redirect('/users/profile')
   })

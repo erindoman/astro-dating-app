@@ -46,7 +46,7 @@ const userSchema = new Schema(
     status: String,
     sunSign: String,
     moonSign: String,
-    ascSign: String
+    ascSign: String,
   }, {
   timestamps: true,
 }

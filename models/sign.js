@@ -1,11 +1,17 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const signSchema = new Schema({
-  sign: String,
-  _id: String,
-  startDate: Date,
-  endDate: Date
+const commentSchema = new Schema({
+  commenter: String,
+  rating: {type: Number, min: 1, max: 5},
+  content: String
 })
 
-Module.exports = mongoose.model("Sign", signSchema);
+const signSchema = new Schema ({
+  sign: {type: String, enum: ['Scorpio', 'Aquarius', 'Cancer', 'Pisces', 'Aries', 'Sagittarius', 'Capricorn', 'Libra', 'Virgo', 'Gemini', 'Leo', 'Taurus']},
+  comments: [commentSchema]
+},{
+  timestamps: true
+})
+
+module.exports = mongoose.model("Sign", signSchema);

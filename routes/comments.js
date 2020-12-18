@@ -1,8 +1,7 @@
 const router = require("express").Router()
-const matchesCtrl = require('../controllers/matches')
+const commentsCtrl = require('../controllers/signs')
 
-router.get("/", isLoggedIn, matchesCtrl.index)
-
+router.post("/users/:id/comments", isLoggedIn, commentsCtrl.create)
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();

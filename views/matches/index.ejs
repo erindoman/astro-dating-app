@@ -4,36 +4,39 @@
         <div class="card-body">
             <h3 class="card-title">
                 <% users.forEach(function(user) { %>
-                    
+
                     <h2>
                         <%= user.name %>
                     </h2>
-                    <p class="card-text">Bio: <%= user.bio %>
+                    <p class="card-text">Status: <%= user.status %>
                     </p>
                     <p class="card-text">Sun Sign: <%= user.sunSign %>
-                        <br>
+                            <br>
 
-                    <a href="/signs" class="learn">Learn more</a>
-                    <br>
-                    <br>
+                            <a href="/signs" class="learn">Learn more</a>
+                            <br>
+                            <br>
                     </p>
                     <p class="card-text">Moon Sign: <%= user.moonSign %>
-                        <br>
-                    <a href="/signs" class="learn">Learn more</a>
-                    <br>
-                    <br>
+                            <br>
+                            <a href="/signs" class="learn">Learn more</a>
+                            <br>
+                            <br>
                     </p>
                     <p class="card-text">Asc Sign: <%= user.ascSign %>
-                        <br>
+                            <br>
 
-                    <a href="/signs" class="learn">Learn more</a>
+                            <a href="/signs" class="learn">Learn more</a>
+                            <br>
+                            <br>
+                            <a href="/users/<%= user.id %>/">Interested? Say Hi!</a>
                     </p>
                     <br>
                     <br>
                     <hr>
                     <br>
                     </form>
-                
+
                     <% }) %>
         </div>
     </div>

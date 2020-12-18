@@ -1,18 +1,18 @@
 const User = require("../models/user");
 
 sunsignLookup = {
-  taurus: ["Virgo", "Capricorn"],
-  aries: ["Sagittarius", "Leo"],
-  gemini: ["Libra", "Aquarius"],
-  cancer: ["Scorpio", "Pisces"],
-  leo: ["Aries", "Sagittarius"],
-  virgo: ["Taurus", "Capricorn"],
-  libra: ["Gemini", "Aquarius"],
-  scorpio: ["Cancer", "Pisces"],
-  sagittarius: ["Leo", "Aries"],
-  capricorn: ["Virgo", "Taurus"],
-  aquarius: ["Gemini", "Libra"],
-  pisces: ["Cancer", "Scorpio"],
+  Taurus: ["Virgo", "Capricorn"],
+  Aries: ["Sagittarius", "Leo"],
+  Gemini: ["Libra", "Aquarius"],
+  Cancer: ["Scorpio", "Pisces"],
+  Leo: ["Aries", "Sagittarius"],
+  Virgo: ["Taurus", "Capricorn"],
+  Libra: ["Gemini", "Aquarius"],
+  Scorpio: ["Cancer", "Pisces"],
+  Sagittarius: ["Leo", "Aries"],
+  Capricorn: ["Virgo", "Taurus"],
+  Aquarius: ["Gemini", "Libra"],
+  Pisces: ["Cancer", "Scorpio"],
 }
 
 module.exports = {
