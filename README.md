@@ -1,4 +1,4 @@
-# Written in
+# Written in the Stars: An Astrological Social App
 December 2020
 
 <h3>About</h3>
