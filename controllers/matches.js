@@ -19,6 +19,8 @@ module.exports = {
   index
 };
 
+// function takes the user logged in and populates their sun sign. the function uses the sunsign lookup to find key value match, populating the appropriate sign matches the user
+
 function index(req, res) {
   User.findById(req.user._id)
   .then((user) => {
@@ -29,5 +31,3 @@ function index(req, res) {
   })
 }
 
-
-// taking the user logged in and populating their sun sign and using the sunsign lookup to find key value match, populating  users with the value matches
