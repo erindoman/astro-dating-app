@@ -1,5 +1,4 @@
-const Sign = require("../models/Sign");
-const User = require("../models/user");
+const Sign = require("../models/sign");
 
 module.exports = {
     index,
