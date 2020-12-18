@@ -2,24 +2,25 @@ const Sign = require("../models/Sign");
 const User = require("../models/user");
 
 module.exports = {
-  index,
-  edit,
-  update
+    index,
+    create,
+    delete: deleteReview
 }
 
 function index(req, res){
-  res.render("signs", {title: "Edit Page", user: req.user} )
- }
+    Sign.find({})
+    .then((signs) =>
+    res.render("signs/index", {title: "Reviews", user: req.user, signs})
+    )
+   }
 
-function edit(req, res) {
-  Sign.find({})
-  .then((signs) => {
-    res.render('signs/edit', {title: "Review Sign", user: req.user})
-  })
-}
+function create(req, res) {
+    Sign.create(req.body)
+    .then(() => {
+      res.redirect('/reviews')
+    })
+  }
 
-function update(req, res) {
-  Sign.findByIdAndUpdate(req.params.id, req.body, {new:true}, function(err, sign){
-    res.redirect('/signs')
-  })
+function deleteReview(req, res) {
+
 }
