@@ -3,9 +3,9 @@ December 2020
 
 <h3>About</h3>
 
-URL: TBD
+[Written in the Stars](http://astro-dating-app.herokuapp.com/)
 
-Trello: https://trello.com/b/x0DLuoEy/unit-2-project-astro-dating-app
+[Trello](https://trello.com/b/x0DLuoEy/unit-2-project-astro-dating-app)
 
 This is a simple, bare-bones social app, centered around astrology. Originally conceptualized as a dating app, the app features an open chat room and a sign-raiting system to encourage social interaction and discussion around all things astrology.
 
