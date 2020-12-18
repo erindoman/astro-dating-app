@@ -4,8 +4,7 @@ const signsCtrl = require("../controllers/signs");
 router.get('/', isLoggedIn, signsCtrl.index)
 router.post('/', isLoggedIn, signsCtrl.create)
 router.delete('/:id', isLoggedIn, signsCtrl.delete)
-// router.get("/:id/edit", isLoggedIn, signsCtrl.edit)
-// router.put('/:id', signsCtrl.update)
+
 
 
 function isLoggedIn(req, res, next) {

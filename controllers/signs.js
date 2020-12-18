@@ -17,10 +17,13 @@ function index(req, res){
 function create(req, res) {
     Sign.create(req.body)
     .then(() => {
-      res.redirect('/reviews')
+      res.redirect('/signs')
     })
   }
 
 function deleteReview(req, res) {
-
+    Sign.findByIdAndDelete(req.params.id)
+    .then(() => {
+      res.redirect('/signs')
+    })
 }

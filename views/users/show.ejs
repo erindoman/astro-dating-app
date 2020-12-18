@@ -1,59 +1,59 @@
 <%- include('../partials/header') %>
 
-<form action="/users/profile/?_method=PUT" method="POST">
+  <form action="/users/profile/?_method=PUT" method="POST">
 
-  <label>Bio:</label>
-        <input type="text" name="name" value="<%= user.name %>">
-           
-  <label>Sun Sign: </label>
-  <select name="sunSign">
-    <option value="aquarius">Aquarius</option>
-    <option value="Pisces">Pisces</option>
-    <option value="Aries">Aries</option>
-    <option value="Taurus">Taurus</option>
-    <option value="aquarius">Gemini</option>
-    <option value="Pisces">Cancer</option>
-    <option value="Aries">Leo</option>
-    <option value="Taurus">Virgo</option>
-    <option value="aquarius">Libra</option>
-    <option value="Pisces">Scorpio</option>
-    <option value="Aries">Sagittarius</option>
-    <option value="Taurus">Capricorn</option>
-  </select>     
+    <label>Bio:</label>
+    <input type="text" name="name" value="<%= user.name %>">
 
-        <label>Moon Sign: </label>
-  <select name="moonSign">
-    <option value="aquarius">Aquarius</option>
-    <option value="Pisces">Pisces</option>
-    <option value="Aries">Aries</option>
-    <option value="Taurus">Taurus</option>
-    <option value="aquarius">Gemini</option>
-    <option value="Pisces">Cancer</option>
-    <option value="Aries">Leo</option>
-    <option value="Taurus">Virgo</option>
-    <option value="aquarius">Libra</option>
-    <option value="Pisces">Scorpio</option>
-    <option value="Aries">Sagittarius</option>
-    <option value="Taurus">Capricorn</option>
-  </select>   
+    <label>Sun Sign: </label>
+    <select name="sunSign">
+        <option value="Aquarius">Aquarius</option>
+        <option value="Pisces">Pisces</option>
+        <option value="Aries">Aries</option>
+        <option value="Taurus">Taurus</option>
+        <option value="Gemini">Gemini</option>
+        <option value="Cancer">Cancer</option>
+        <option value="Leo">Leo</option>
+        <option value="Virgo">Virgo</option>
+        <option value="Libra">Libra</option>
+        <option value="Scorpio">Scorpio</option>
+        <option value="Sagittarius">Sagittarius</option>
+        <option value="Capricorn">Capricorn</option>
+      </select> 
 
-  <label>Asc Sign: </label>
-  <select name="ascSign" id="ascSign">
-    <option value="aquarius">Aquarius</option>
-    <option value="Pisces">Pisces</option>
-    <option value="Aries">Aries</option>
-    <option value="Taurus">Taurus</option>
-    <option value="aquarius">Gemini</option>
-    <option value="Pisces">Cancer</option>
-    <option value="Aries">Leo</option>
-    <option value="Taurus">Virgo</option>
-    <option value="aquarius">Libra</option>
-    <option value="Pisces">Scorpio</option>
-    <option value="Aries">Sagittarius</option>
-    <option value="Taurus">Capricorn</option>
-  </select>   
+    <label>Moon Sign: </label>
+    <select name="moonSign">
+        <option value="Aquarius">Aquarius</option>
+        <option value="Pisces">Pisces</option>
+        <option value="Aries">Aries</option>
+        <option value="Taurus">Taurus</option>
+        <option value="Gemini">Gemini</option>
+        <option value="Cancer">Cancer</option>
+        <option value="Leo">Leo</option>
+        <option value="Virgo">Virgo</option>
+        <option value="Libra">Libra</option>
+        <option value="Scorpio">Scorpio</option>
+        <option value="Sagittarius">Sagittarius</option>
+        <option value="Capricorn">Capricorn</option>
+      </select> 
 
-  <button type="submit">Submit</button>
-</form>
+    <label>Asc Sign: </label>
+    <select name="ascSign" id="ascSign">
+        <option value="Aquarius">Aquarius</option>
+        <option value="Pisces">Pisces</option>
+        <option value="Aries">Aries</option>
+        <option value="Taurus">Taurus</option>
+        <option value="Gemini">Gemini</option>
+        <option value="Cancer">Cancer</option>
+        <option value="Leo">Leo</option>
+        <option value="Virgo">Virgo</option>
+        <option value="Libra">Libra</option>
+        <option value="Scorpio">Scorpio</option>
+        <option value="Sagittarius">Sagittarius</option>
+        <option value="Capricorn">Capricorn</option>
+      </select> 
+
+    <button type="submit">Submit</button>
+  </form>
 
   <%- include('../partials/footer') %>
