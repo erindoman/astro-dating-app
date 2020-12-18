@@ -5,8 +5,7 @@ module.exports = {
   show,
   showProfile,
   edit,
-  update,
-  delete: deleteStatus
+  update
 };
 
 function index(req, res) {
@@ -40,8 +39,3 @@ function update(req, res) {
   })
 }
 
-function deleteStatus(req, res) {
-  User.findByIdAndDelete(req.params.id, (err) => {
-    res.redirect('/users/profile', {users})
-  })
-}
