@@ -39,7 +39,7 @@ Landing page:
 ![Landing page](https://i.imgur.com/Gy6zxky.png)
 
 User profile:
-![User profile](https://i.imgur.com/UWemAdJ.png)
+![User profile](https://i.imgur.com/sDNgfun.png)
 
 Matches page:
 ![Matches page](https://i.imgur.com/MKdS6Xi.png)
@@ -49,6 +49,15 @@ Reviews page:
 
 Message board:
 ![Message board](https://i.imgur.com/ZJPQf8I.png)
+
+Original ERD:
+![Original ERD](https://i.imgur.com/ySTWE2l.png)
+
+Original user profile wireframe:
+![Original user profile wireframe](https://i.imgur.com/cfNfHpA.png)
+
+Original matches wireframe
+![original matches wireframe](https://i.imgur.com/kG0puUW.png)
 
 ---------------------------------------
 
