@@ -36,19 +36,19 @@ Using the message board, users can create threads of varying (hopefully astrolog
 <h3>Screenshots</h3>
 
 Landing page:
-![Landing page](public/images/Screen Shot 2020-12-20 at 5.21.19 PM.png)
+![Landing page](https://imgur.com/Gy6zxky)
 
 User profile:
-![User profile](public/images/Screen Shot 2020-12-20 at 5.21.42 PM.png)
+![User profile](https://imgur.com/UWemAdJ)
 
 Matches page:
-![Matches page](public/images/Screen Shot 2020-12-20 at 5.21.53 PM.png)
+![Matches page](https://imgur.com/MKdS6Xi)
 
 Reviews page:
-![Reviews page](public/images/Screen Shot 2020-12-20 at 5.22.09 PM.png)
+![Reviews page](https://imgur.com/ZMcibwY)
 
 Message board:
-![Message board](public/images/Screen Shot 2020-12-20 at 5.22.24 PM.png)
+![Message board](https://imgur.com/ZJPQf8I)
 
 ---------------------------------------
 
