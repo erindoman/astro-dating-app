@@ -18,23 +18,13 @@ html {
 
 section.wrapper {
   text-align: center;
-  margin: 150px 450px 280px 450px;
+  margin: 150px 450px -100px 450px;
   padding: 40px;
-  min-width: 500px;
-  max-width: 1000px;
+  min-width: 50%;
   justify-content: center;
   align-items: center;
-  display: block;
-
-  /* background-color: rgba(255, 255, 255, 0.301);
-  margin: 150px 600px;
-  padding: 10px;
-  color: white;
-  text-align: center;
-  border-radius: 15px;
-  text-shadow: 1px 1px #000000;
-  min-width: 450px;
-  max-width: 800px; */
+  display: flex;
+  flex-direction: column;
 }
 
 p {
@@ -55,8 +45,10 @@ body {
   justify-content: center;  
   align-items: center;
   height: 100vh;
-  display: block;
+
+
 }
+
 
 
 .fire {
@@ -75,16 +67,10 @@ body {
   color: rgb(129, 112, 35)
 }
 
-p.card-text {
-  margin: 10px;
-}
+
 
 p {
   margin: 10px;
-}
-
-.navbar-nav {
-  align-items: right;
 }
 
 
@@ -105,12 +91,6 @@ a {
   width: 100%; 
 }
 
-.nav {
-  list-style: none;
-  background-color: white;
-  display: flex;
-
-}
 
 section {
   background-color: rgba(255, 255, 255, 0.301);
@@ -118,8 +98,8 @@ section {
   text-align: center;
   justify-content: center;
   border-radius: 15px;
-  text-shadow: 1px 1px #000000;
 }
+
 
 li {
   list-style: none

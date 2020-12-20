@@ -7,7 +7,7 @@
             <input type="text" class="form-control" aria-describedby="message" name="title"
                 placeholder="Say something kind!">
         </div>
-        <button type="submit" class="btn btn-success">Create Post</button>
+        <button type="submit" class="btn btn-info">Create Post</button>
     </form>
     </section>
 
@@ -22,7 +22,7 @@
                 <h6>
                     <%= message.createdAt.toLocaleString()%>
                 </h6>
-                <a href="/messages/<%= message._id %>" class="btn btn-primary">See Post</a>
+                <a href="/messages/<%= message._id %>" class="btn btn-info">See Post</a>
             </div>
         </section>
         <% }) %>

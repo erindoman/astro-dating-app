@@ -14,6 +14,7 @@ function index(req, res){
    }
 
 function create(req, res) {
+  console.log(req.body)
     Sign.create(req.body)
     .then(() => {
       res.redirect('/signs')
@@ -23,6 +24,6 @@ function create(req, res) {
 function deleteReview(req, res) {
     Sign.findByIdAndDelete(req.params.id)
     .then(() => {
-      res.redirect('/signs')
+      res.redirect('/signs',)
     })
 }
