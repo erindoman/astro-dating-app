@@ -37,14 +37,11 @@
             <input type="text" hidden name="reviewerPhoto" value="<%= user.avatar %>"> 
             <button class="btn btn-info">Submit</button>
           </form>
-
+</section>
           </div>
-
-    <br>
-    <br>
-    <hr>
-    <br>
+    <section class="wrapper">
     <% if (!signs.length) {%> 
+
         <p>There are no reviews!</p>
         <% } else {%> 
     <% signs.forEach((sign) => {%> 
@@ -54,11 +51,11 @@
       <br>
       <form action="/signs/<%= sign._id %>?_method=DELETE" method="POST">
           <button type="submit" class="btn btn-info">Delete</button>
+          <hr>
       </form>
-        <hr>
-        <% }) %> 
-        <% } %> 
-      </section>
+      <% }) %> 
+      <% } %> 
+    </section>
 
     
     <%- include('../partials/footer') %>
