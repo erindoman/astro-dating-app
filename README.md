@@ -36,19 +36,19 @@ Using the message board, users can create threads of varying (hopefully astrolog
 <h3>Screenshots</h3>
 
 Landing page:
-![Landing page](https://imgur.com/Gy6zxky)
+![Landing page](https://i.imgur.com/Gy6zxky.png)
 
 User profile:
-![User profile](https://imgur.com/UWemAdJ)
+![User profile](https://i.imgur.com/UWemAdJ.png)
 
 Matches page:
-![Matches page](https://imgur.com/MKdS6Xi)
+![Matches page](https://i.imgur.com/MKdS6Xi.png)
 
 Reviews page:
-![Reviews page](https://imgur.com/ZMcibwY)
+![Reviews page](https://i.imgur.com/ZMcibwY.png)
 
 Message board:
-![Message board](https://imgur.com/ZJPQf8I)
+![Message board](https://i.imgur.com/ZJPQf8I.png)
 
 ---------------------------------------
 
