@@ -25,8 +25,9 @@ Using the message board, users can create threads of varying (hopefully astrolog
 * Heroku
 * OAuth
 * Passport
+* Trello
+* Bootstrap
 * [Stars Icon by Rois Faozi via The Noun Project](https://thenounproject.com/search/?q=star&i=3347240)
-* [Parallax Star Background by Saransh Sinha](https://codepen.io/saransh/pen/BKJun)
 * [What is Astrology? By Ed Grabianowski](https://entertainment.howstuffworks.com/horoscopes-astrology/question749.htm)
 * [Astrology Zodiac Signs](https://www.astrology-zodiac-signs.com/)
 
@@ -35,19 +36,19 @@ Using the message board, users can create threads of varying (hopefully astrolog
 <h3>Screenshots</h3>
 
 Landing page:
-[placeholder]
+![Landing page](public/images/Screen Shot 2020-12-20 at 5.21.19 PM.png)
 
 User profile:
-[placeholder]
+![User profile](public/images/Screen Shot 2020-12-20 at 5.21.42 PM.png)
 
-Matches:
-[placeholder]
+Matches page:
+![Matches page](public/images/Screen Shot 2020-12-20 at 5.21.53 PM.png)
 
-Reviews:
-[placeholder]
+Reviews page:
+![Reviews page](public/images/Screen Shot 2020-12-20 at 5.22.09 PM.png)
 
 Message board:
-[placeholder]
+![Message board](public/images/Screen Shot 2020-12-20 at 5.22.24 PM.png)
 
 ---------------------------------------
 
