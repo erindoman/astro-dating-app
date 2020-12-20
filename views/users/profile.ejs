@@ -5,9 +5,9 @@
     <h2 class="card-title">
       <%= user.name %>
     </h2>
-    <a href="/users/<%= user._id %>/edit">Edit Profile</a>
-    <a href="/matches">View Matches</a>
-    <a href="/signs">Review Signs</a>
+    <a href="/users/<%= user._id %>/edit" class="profile">Edit Profile</a>
+    <a href="/matches" class="profile">View Matches</a>
+    <a href="/signs" class="profile">Review Signs</a>
     <hr>
     <p class="card-text">Email: <%= user.email %>
     </p>
