@@ -9,14 +9,13 @@
 </form>
 
 <% messages.forEach(message => { %>
-
   <section class="wrapper">
     <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
             <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
-   <hr>
-      <h5 class="card-title"><%= message.title %></h5>
-      <h6><%= message.createdAt.toLocaleString()%></h6>
-      <a href="/messages/<%= message._id %>" class="btn btn-primary">See Post</a>
+    <hr>
+    <h5 class="card-title"><%= message.title %></h5>
+    <h6><%= message.createdAt.toLocaleString()%></h6>
+    <a href="/messages/<%= message._id %>" class="btn btn-primary">See Post</a>
     </div>
   </section>
 <% }) %>

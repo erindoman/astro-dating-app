@@ -1,36 +1,23 @@
 <%- include('../partials/header') %>
 
 <% users.forEach(function(user) { %>
-<section class="wrapper">
-
-
-                    <h2>
-                        <%= user.name %>
-                    </h2>
-                    <p class="card-text">Status: <%= user.status %>
-                    </p>
-                    <hr>
-                    <p class="card-text">Sun Sign: <%= user.sunSign %>
-                            <br>
-
-                            <a href="/" class="learn">Learn more</a>
-                            <br>
-                    </p>
-                    <p class="card-text">Moon Sign: <%= user.moonSign %>
-                            <br>
-                            <a href="/" class="learn">Learn more</a>
-                            <br>
-                    </p>
-                    <p class="card-text">Asc Sign: <%= user.ascSign %>
-                            <br>
-
-                            <a href="/" class="learn">Learn more</a>
-                            <br>
-                    </p>
-        
-                    </form>
-
-                </section>
-                    <% }) %>
+        <section class="wrapper">
+                <h2><%= user.name %></h2>
+                <p class="card-text">Status: <%= user.status %></p>
+                <hr>
+                <p class="card-text">Sun Sign: <%= user.sunSign %>
+                <br>
+                <a href="/" class="learn">Learn more</a></p>
+                <br>
+                <p class="card-text">Moon Sign: <%= user.moonSign %>
+                <br>
+                <a href="/" class="learn">Learn more</a></p>
+                <br>
+                <p class="card-text">Asc Sign: <%= user.ascSign %>
+                <br>
+                <a href="/" class="learn">Learn more</a></p>
+                <br>
+        </section>
+<% }) %>
 
     <%- include('../partials/footer') %>

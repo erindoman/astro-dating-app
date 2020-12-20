@@ -1,7 +1,6 @@
 <%- include('../partials/header') %>
 
 <section class="wrapper">
-
     <form action="/messages" method="POST">
         <div class="form-group input">
             <input type="text" class="form-control" aria-describedby="message" name="title"
@@ -9,22 +8,16 @@
         </div>
         <button type="submit" class="btn btn-info">Create Post</button>
     </form>
-    </section>
+</section>
 
-    <% messages.forEach(function(message) { %>
-        <section class="wrapper">
-                <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
-            
-                <hr>
-                <h5 class="card-title">
-                    <%= message.title %>
-                </h5>
-                <h6>
-                    <%= message.createdAt.toLocaleString()%>
-                </h6>
-                <a href="/messages/<%= message._id %>" class="btn btn-info">See Post</a>
-            </div>
-        </section>
-        <% }) %>
+<% messages.forEach(function(message) { %>
+    <section class="wrapper">
+            <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
+            <hr>
+            <h5 class="card-title"><%= message.title %></h5>
+            <h6><%= message.createdAt.toLocaleString()%></h6>
+            <a href="/messages/<%= message._id %>" class="btn btn-info">See Post</a>
+    </section>
+<% }) %>
 
 <%- include('../partials/footer') %>

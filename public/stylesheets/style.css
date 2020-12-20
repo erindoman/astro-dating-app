@@ -9,7 +9,7 @@ html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-family: 'Quicksand', sans-serif;
-  margin: 0;
+  margin: 0p
 }
 
 :root {
@@ -18,12 +18,11 @@ html {
 
 section.wrapper {
   text-align: center;
-  margin: 150px 450px;
+  margin: 200px;
   padding: 40px;
   min-width: 50%;
   justify-content: center;
   align-items: center;
-
 }
 
 .input {
@@ -34,14 +33,10 @@ section.wrapper {
   flex-direction: column;
 }
 
-.profile {
-  display: inline;
-}
-
 p {
   color: white;
   text-align: center;
-  margin: 220px;
+  margin: 10px;
 }
 
 hr {
@@ -56,13 +51,6 @@ body {
   justify-content: center;  
   align-items: center;
   height: 100vh;
-
-}
-
-
-
-p {
-  margin: 10px;
 }
 
 a {
@@ -106,14 +94,4 @@ input {
 #avatarPhoto {
   border-radius: 50%;
   align-items: right;
-}
-
-@media only screen and (max-width: 500px) {
-  
-  section.wrapper{
-    max-width: 600px;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
 }
