@@ -1,25 +1,24 @@
 <%- include('../partials/header') %>
 
+<% users.forEach(function(user) { %>
 <section class="wrapper">
 
-                <% users.forEach(function(user) { %>
 
                     <h2>
                         <%= user.name %>
                     </h2>
                     <p class="card-text">Status: <%= user.status %>
                     </p>
+                    <hr>
                     <p class="card-text">Sun Sign: <%= user.sunSign %>
                             <br>
 
                             <a href="/" class="learn">Learn more</a>
                             <br>
-                            <br>
                     </p>
                     <p class="card-text">Moon Sign: <%= user.moonSign %>
                             <br>
                             <a href="/" class="learn">Learn more</a>
-                            <br>
                             <br>
                     </p>
                     <p class="card-text">Asc Sign: <%= user.ascSign %>
@@ -27,16 +26,11 @@
 
                             <a href="/" class="learn">Learn more</a>
                             <br>
-                            <br>
-
                     </p>
-                    <br>
-                    <br>
-                    <hr>
-                    <br>
+        
                     </form>
 
-                    <% }) %>
                 </section>
+                    <% }) %>
 
     <%- include('../partials/footer') %>

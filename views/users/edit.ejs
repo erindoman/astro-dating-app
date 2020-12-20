@@ -8,9 +8,11 @@
                         <h5 class="card-title">Name: <%= user.name %>
                         </h5>
 
-                        <label>Status:</label>
+                        <label>Status: </label>
+                        <br>
                         <input type="text" name="status" value="<%= user.status %> ">
-
+                        <br>
+                        <hr>
                         <br>
                         <label>Sun Sign: </label>
                         <select name="sunSign" value="<%= user.sunSign %> ">
@@ -60,7 +62,7 @@
                             <option value="Capricorn">Capricorn</option>
                         </select>
                         <br>
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="btn btn-info">Submit</button>
                     </form>
 
 </section>
