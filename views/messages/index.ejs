@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 
-    <h3>Message Board</h3>
+<section class="wrapper">
+
     <form action="/messages" method="POST">
         <div class="form-group">
             <input type="text" class="form-control" aria-describedby="message" name="title"
@@ -8,13 +9,13 @@
         </div>
         <button type="submit" class="btn btn-success">Create Post</button>
     </form>
+    </section>
 
     <% messages.forEach(function(message) { %>
-        <div class="card">
-            <div class="card-header">
+        <section class="wrapper">
                 <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
-            </div>
-            <div class="card-body">
+            
+                <hr>
                 <h5 class="card-title">
                     <%= message.title %>
                 </h5>
@@ -23,7 +24,7 @@
                 </h6>
                 <a href="/messages/<%= message._id %>" class="btn btn-primary">See Post</a>
             </div>
-        </div>
+        </section>
         <% }) %>
 
 <%- include('../partials/footer') %>
