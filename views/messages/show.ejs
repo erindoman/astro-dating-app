@@ -2,25 +2,24 @@
 
 <section class="wrapper">
 
-<h3>Message Details</h3>
 <h4><%= message.title %></h4>
 <h5>Posted on <%= message.createdAt.toLocaleString() %> - <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt=""></h5>
-</section>
-
-<% message.replies.forEach(reply => { %>
-    
-  <section class="wrapper">
-
-          <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
-       <hr>
-    <h6><%= reply.message %> - <%= reply.postedBy %> <img id="avatarPhoto" width="25" src="<%= reply.avatar %>" alt=""></h6>
-<% }) %>
 
 <form action="/messages/<%= message._id %>" method="POST">
-  <div class="form-group">
-    <input type="text" class="form-control" aria-describedby="message" name="message" placeholder="Enter reply...">
+  <div class="form-group input">
+    <input type="text" class="form-control" aria-describedby="message" name="message" placeholder="Say something nice!">
   <button type="submit" class="btn btn-primary">Reply</button>
 </form>
   </section>
+
+<% message.replies.forEach(reply => { %>
+  <section class="wrapper">
+          <%= message.postedBy %>
+       <hr>
+    <h6><%= reply.message %></h6>
+  </section>
+
+<% }) %>
+<br>
 
 <%- include('../partials/footer') %>
