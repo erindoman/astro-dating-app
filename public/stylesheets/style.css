@@ -98,14 +98,18 @@ a {
   font-size: 12px;
 }
 
+.navbar {
+  overflow: hidden;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+}
+
 .nav {
   list-style: none;
   background-color: white;
   display: flex;
-}
 
-.nav-link {
-  color: blue;
 }
 
 section {
